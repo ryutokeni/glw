@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+@{  
+    string language = ViewBag.language;
+    switch (language)
+    {
+        case "tw":
+            Common.imgPrefix = "_tw"; 
+            Common.langID = 0;
+            break;
+        case "en":
+            Common.imgPrefix = "_en"; 
+            Common.langID = 5;
+            break;
+        case "vn":
+            Common.imgPrefix = "_yn"; 
+            Common.langID = 6;
+            break;
+        case "hg":
+            Common.imgPrefix = "_hg"; 
+            Common.langID = 0;
+            break;
+        default:
+            Common.imgPrefix = ""; 
+            Common.langID = 4;
+            break;
+    }
+}
+<head>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" />
+
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    <style>
+        .partial-view-container {
+            overflow-y: auto;
+        }
+    </style>
+    @Styles.Render("~/Content/Index.css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+
+<body>
+    @{Html.RenderPartial("_LayoutIndexTop");}
+    @{Html.RenderPartial("_LayoutIndexLeft");}
+    <div class="main">
+        @{Html.RenderPartial("AccountSummary");}
+    </div>
+    @RenderBody()
+
+
+    @Scripts.Render("~/bundles/otf")
+    @RenderSection("scripts", required: false)
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $("#datebegin, #dateend").datepicker();
+        });
+    </script>
+</body>
+</html>

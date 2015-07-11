@@ -1,0 +1,45 @@
+﻿@{
+    Layout = null;
+}
+
+@Styles.Render("~/Content/Index.css")
+@Scripts.Render("~/bundles/modernizr")
+
+<form id="form1" runat="server">
+    <div class="top_wrapper">
+        <div class="top_logo">
+            @Video.Flash(path: "~/images/logo.swf", width: "200", height: "90", quality: "high", windowMode: "transparent")
+        </div>
+    </div>
+    
+    <div class="top_bar">
+        <div class="top_bar_header"></div>
+        
+        <div class="top_area1">
+            <span class="font1">
+                @LocBuilder.Instance.Text(466)
+            </span>
+            <span class="font2">
+                (@(Session["jibie"])) @(LocBuilder.Instance.Text(467)):@*@(Cw.Global.Global.GetSeesionManUser().UserName)*@
+            </span>
+        </div>
+
+        <div class="top_area2">
+            <span class="font1">
+                @(LocBuilder.Instance.Text(477))：@*@(Session["lastLoginData"].ToString())*@
+            </span>
+        </div>
+
+        <div class="top_marquee_head"></div>
+        <div class="top_marquee_body">
+            <div class="font3">
+                <marquee behavior=scroll direction=left width=410px height=18 scrollamount=1 scrolldelay=30 onmouseover='this.stop()' onmouseout='this.start()'><asp:Label ID="lblMessage" style="font-size:10pt;color: #FFFF00;" runat="server" Text="3333333333333333333333333333"></asp:Label></marquee>
+            </div>
+        </div>
+        <div class="top_marquee_tail"></div>
+        <div class="top_bar_tail">
+            <a target="_top" style="font-size: 14px;font-style: normal;line-height: 150%;color: #FFFFFF;text-decoration: none;" href="Exit.aspx" onclick="return loginout()"> @LocBuilder.Instance.Text(479)</a>
+        </div>
+        <div class="top_logout"></div>
+    </div>
+</form>

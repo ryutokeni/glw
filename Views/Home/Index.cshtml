@@ -1,0 +1,7 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+    string path = Server.MapPath("~/Localization/langs.csv");
+    LocBuilder.Instance.SetPath(path);
+    LocBuilder.Instance.LoadLanguagePackage();
+}

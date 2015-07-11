@@ -1,0 +1,33 @@
+﻿@{
+    Layout = null;
+}
+@Styles.Render("~/Content/Index.css")
+@Scripts.Render("~/bundles/modernizr")
+
+
+<div class="AccSum_bg">
+    <div class="mainpage_topbar">
+        <img src="/Images/images@(Common.imgPrefix)/sybbbg.jpg" class="mainpage_topbar_p1" />
+        <img src="/Images/images@(Common.imgPrefix)/index_r4_c14.jpg" class="mainpage_topbar_p2" />
+        <img src="/Images/images@(Common.imgPrefix)/index_r4_c37.jpg" class="mainpage_topbar_p3" />
+    </div>
+    <div style="padding:5px 0px 0px 5px;">
+        @ViewBag.Main @LocBuilder.Instance.Text(39) @Html.TextBox("datebegin", "", new { style = "width:100px", id = "datebegin" }) 12:00:00 @LocBuilder.Instance.Text(37) @Html.TextBox("dateend", "", new { style = "width:100px", id = "dateend" }) 11:59:59
+        <span>
+            <input id="Raw data" type="radio" name="q" checked="checked" /> @LocBuilder.Instance.Text(486) <input id="by HKD" type="radio" name="q" /> @LocBuilder.Instance.Text(487)
+            <input id="Query" type="button" value="@LocBuilder.Instance.Text(488)" style="width:100px;" />
+            <input id="Today" type="button" value="@LocBuilder.Instance.Text(489)" style="width:100px;" />
+            <input id="PreWeek" type="button" value="@LocBuilder.Instance.Text(490)" style="width:100px;" />
+            <input id="ThisWeek" type="button" value="@LocBuilder.Instance.Text(491)" style="width:100px;" />
+            <input id="PreMonth" type="button" value="@LocBuilder.Instance.Text(492)" style="width:100px;" />
+            <input id="ThisMonth" type="button" value="@LocBuilder.Instance.Text(493)" style="width:100px;" />
+        </span>
+    </div>
+    <div id="loading" style="background-image:url(/Images/loading.gif); width:45px; height:45px;position:absolute; top:150px; left:600px"></div>
+    <div id="divMyAccount"></div>
+    <div id="divSubAccount"></div>
+    <div id="divMyCard"></div>
+    <div id="MyDatesSummary"></div>
+    <div id="divDetail"></div>
+</div>
+

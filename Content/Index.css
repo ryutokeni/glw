@@ -1,0 +1,235 @@
+body {
+	background-color: #000000;
+	margin: 0px;
+}
+td {
+	font-size: 12px;
+	font-style: normal;
+	line-height: 150%;
+	color: #000000;
+	text-decoration: none;
+}
+a:link {
+	font-size: 12px;
+	font-style: normal;
+	line-height: 150%;
+	color: #000000;
+	text-decoration: none;
+}
+a:visited {
+	font-size: 12px;
+	font-style: normal;
+	line-height: 150%;
+	color: #000000;
+	text-decoration: none;
+}
+a:hover {
+	font-size: 12px;
+	font-style: normal;
+	line-height: 150%;
+	color: #FF0000;
+	text-decoration: none;
+}
+
+.font1 {
+	font-size: 14px;
+	font-style: normal;
+	line-height: 150%;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.font2 {
+	font-size: 14px;
+	font-style: normal;
+	line-height: 150%;
+	color: #FFFF00;
+	text-decoration: none;
+}
+.font3 {
+	font-size: 12px;
+	font-style: normal;
+	line-height: 150%;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.font4 {
+	font-size: 12px;
+	font-style: normal;
+	line-height: 150%;
+	color: #FF0000;
+	text-decoration: none;
+}
+.font5 {
+	font-size: 14px;
+	font-style: normal;
+	line-height: 150%;
+	color: #000000;
+	text-decoration: none;
+	font-weight: bold;
+}
+a.font4:link {
+	font-size: 12px;
+	font-style: normal;
+	line-height: 150%;
+	color: #FF0000;
+	text-decoration: none;
+}
+a.font4:visited {
+	font-size: 12px;
+	font-style: normal;
+	line-height: 150%;
+	color: #FF0000;
+	text-decoration: none;
+}
+a.font4:hover {
+	font-size: 12px;
+	font-style: normal;
+	line-height: 150%;
+	color: #0000FF;
+	text-decoration: none;
+}
+.btn1
+{
+	font-size: 11px;
+	height: 22px;
+	vertical-align: middle;
+	text-align: center;
+	padding-top: 2px;
+}
+.hooyestreeCss td div
+       {
+            height: 20px !important;
+        }
+.mouseover{
+    height:120%;
+    width:120%;
+    margin:auto;
+    padding-left:8px;
+    padding-top:10px;
+    text-align: left;
+}
+.mouseout {
+    height:100%;
+    width:100%;
+    padding-left:26px;
+    padding-top:10px;
+    text-align: left;
+}
+
+.left_main{
+    background: url(../Images/images/index_r25_c1.jpg);
+    float:left;
+    width:220px;
+    height:560px;
+}
+.left_header{
+    width:220px;
+    height:41px;
+}
+.left_button{
+    padding-top:10px;
+    width:168px;
+    height:26px;
+}
+
+.top_wrapper{
+    background: url(../Images/titbg.jpg);
+    width:100%;
+    height:110px;
+}
+.top_logo{
+    position:absolute; 
+    top:20px; 
+    left:20px
+}
+.top_bar{
+    height:32px;
+    width:100%;
+    overflow:hidden;
+    background:url(../Images/images/index_r2_c8.jpg);
+}
+.top_bar_header{
+    width:21px;
+    height:34px;
+    display:inline-block;
+    overflow:hidden;
+    float:left;
+    background:url(../Images/images/index_r2_c1.jpg);
+}
+.top_area1{
+    width:260px;
+    height:20px;
+    display:inline-block;
+    float:left;
+    padding-top:8px;
+    text-align:start;
+}
+.top_area2{
+    width:230px;
+    height:20px;
+    float:left;
+    padding-top:8px;
+    display:inline-block;
+    text-align:start;
+}
+.top_marquee_head{
+    width:9px;
+    height:34px;
+    background:url(../Images/images/index_r2_c18.jpg);
+    float:left;
+}
+.top_marquee_body{
+    width:410px;
+    height:34px;
+    background:url(../Images/images/index_r2_c19.jpg);
+    float:left;
+}
+.top_marquee_tail{
+    width:10px;
+    height:34px;
+    background:url(../Images/images/index_r2_c25.jpg);
+    float:left;
+}
+.top_logout{
+    width:20px;
+    height:34px;
+    background:url(../Images/images/index_r2_c27.jpg);
+    float:right;
+}
+.top_bar_tail{
+    width:65px;
+    height:34px;
+    padding-top:7px;
+    float:right;
+}
+.main{
+    position:absolute;
+    top:142px;
+    left:220px;
+}
+.AccSum_bg{
+    width:1300px;
+    height:100%;
+    background-color:#ffffff;
+}
+.mainpage_topbar{
+    width:100%;
+    height:26px;
+    padding: 5px 0px 0px 5px;
+    overflow:hidden
+}
+.mainpage_topbar_p1{
+    width:120px;
+    height:26px;
+    float:left;
+}
+.mainpage_topbar_p2{
+    width:1160px;
+    height:26px;
+    float:left;
+}
+.mainpage_topbar_p3{
+    width:7px;
+    height:26px;
+    float:left;
+}

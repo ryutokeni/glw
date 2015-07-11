@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>@ViewBag.Title</title>
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width" />
+        @Styles.Render("~/Content/login.css")
+        @Scripts.Render("~/bundles/modernizr")
+    </head>
+    <body>
+            <div class="wrapper">
+                <div class="head">
+                    <div class="logo">
+                        <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000">
+                            @Video.Flash( path: "~/images/logo.swf", width: "231", height: "90", quality: "high", windowMode: "transparent", bgColor: "transparent")
+                        </object>
+                    </div>                   
+                    <div class="yy">                  
+                        @Html.ActionLink("繁體", "Login/tw") | @Html.ActionLink("简体", "Login/") | @Html.ActionLink("English", "Login/en") | @Html.ActionLink("Việt Nam", "Login/vn") | @Html.ActionLink("한국어", "Login/hg")
+                    </div>              
+                </div>
+                <div class="login">
+                    @RenderSection("body")
+                </div>
+                <div class="dy"></div>
+                <div class="footer"></div>
+                <div class="copyright">
+                    @RenderSection("copyright")
+                </div>
+            </div>
+
+        @Scripts.Render("~/bundles/otf")
+        @RenderSection("scripts", required: false)
+    </body>
+</html>
