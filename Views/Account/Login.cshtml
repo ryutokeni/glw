@@ -43,6 +43,7 @@
         var userPwd = document.getElementById("password").value;
         var validCode = document.getElementById("validate").value;
 
+        
         if (userName == "") {
             alert("@LocBuilder.Instance.Text(469)");
             bResult = false;
@@ -61,57 +62,58 @@
         return bResult;
     }
 </script>
-
-@using (Html.BeginForm(new { ReturnUrl = ViewBag.ReturnUrl }))
-{
-    @Html.AntiForgeryToken()
-    @Html.ValidationSummary(true)
-    <table class="style1">
-        <tr>
-            <td align="right" height="35" width="35%">
-                @LocBuilder.Instance.Text(480)
-            </td>
-            <td width="3%">&nbsp;</td>
-            <td colspan="2">            
-                @Html.TextBoxFor(m => m.UserName, new { id="username", @class = "txt" })
-            </td>
-        </tr>
-        <tr>
-            <td align="right" height="35">
-                @LocBuilder.Instance.Text(481)
-            </td>
-            <td width="3%">&nbsp;</td>
-            <td colspan="2">              
-                @Html.PasswordFor(m => m.Password, new { id = "password", @class = "txt" })
-            </td>
-        </tr> 
-        <tr>
-            <td align="right" height="35">
-                @LocBuilder.Instance.Text(482)
-            </td>
-            <td width="3%">&nbsp;</td>
-            <td colspan="2">
-                    @Html.TextBox("Validate code", "", new { id = "validate", @class = "txt" })        
-            </td>
-            <td valign="bottom">
-                <script type="text/javascript" language="JavaScript">
-                    var numkey = Math.random();
-                    numkey = Math.round(numkey * 10000);
-                    document.write("<img src=\"/Account/Image?k=" + numkey + "\" width=\"55px\" onClick=\"this.src+=Math.random()\" alt=\"error\" style=\"cursor:pointer;\" height=\"21px\" hspace=\"4\"");
-                </script>
-            </td>
-        </tr>
-        <tr>
-            <td height="35" class="style1">&nbsp;</td>
-            <td width="3%">&nbsp;</td>
-            <td colspan="2">
-                <label>
-                    <input id="Login" type="submit" class=@SubmitButton value="" onclick="return login();"  />
-                </label>
-            </td>
-        </tr>
-    </table>
-}
+<body>
+    @using (Html.BeginForm(new { ReturnUrl = ViewBag.ReturnUrl }))
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+        <table class="style1">
+            <tr>
+                <td align="right" height="35" width="35%">
+                    @LocBuilder.Instance.Text(480)
+                </td>
+                <td width="3%">&nbsp;</td>
+                <td colspan="2">
+                    @Html.TextBoxFor(m => m.UserName, new { id = "username", @class = "txt" })
+                </td>
+            </tr>
+            <tr>
+                <td align="right" height="35">
+                    @LocBuilder.Instance.Text(481)
+                </td>
+                <td width="3%">&nbsp;</td>
+                <td colspan="2">
+                    @Html.PasswordFor(m => m.Password, new { id = "password", @class = "txt" })
+                </td>
+            </tr>
+            <tr>
+                <td align="right" height="35">
+                    @LocBuilder.Instance.Text(482) @ViewBag.test
+                </td>
+                <td width="3%">&nbsp;</td>
+                <td colspan="2">
+                    @Html.TextBox("Validate code", "", new { id = "validate", @class = "txt" })
+                </td>
+                <td valign="bottom">
+                    <script type="text/javascript" language="JavaScript">
+                        var numkey = Math.random();
+                        numkey = Math.round(numkey * 10000);
+                        document.write("<img src=\"/Account/Image?k=" + numkey + "\" width=\"55px\" onClick=\"this.src+=Math.random()\" alt=\"error\" style=\"cursor:pointer;\" height=\"21px\" hspace=\"4\"");
+                    </script>
+                </td>
+            </tr>
+            <tr>
+                <td height="35" class="style1">&nbsp;</td>
+                <td width="3%">&nbsp;</td>
+                <td colspan="2">
+                    <label>
+                        <input id="Login" type="submit" class=@SubmitButton value="" onclick="return login();" />
+                    </label>
+                </td>
+            </tr>
+        </table>
+    }
+</body>
 }
 
 @section copyright {

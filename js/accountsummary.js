@@ -344,7 +344,7 @@ function queryToday() {
 ///
 /// Push data to WinLoss menu
 ///
-function queryTodaySucc(result) {
+function queryTodaySucc(result) { //result to ViewBag, remove str
     document.getElementById("loading").style.display = "none";
     document.getElementById("query").disabled = false;
     document.getElementById("todayquerty").disabled = false;
@@ -457,7 +457,7 @@ Show first table of WinLoss menu
 
 ==================================================================
 */
-function showTodayGroupTableHead() {
+function showTodayGroupTableHead() { //ssName to ViewBag, remove str
     var groupID = document.getElementById("HiddenGroupID").value;
     var ssName = new Array(20);
     ssName[0] = Text(6);
@@ -513,7 +513,7 @@ Show second table of WinLoss menu
 
 ==================================================================
 */
-function showTodaySubGroupTableHead() {
+function showTodaySubGroupTableHead() { //send ssName to ViewBag, remove str
     var groupID = document.getElementById("HiddenGroupID").value;
     var ssName = new Array(20);
     ssName[0] = Text(6);
@@ -568,7 +568,7 @@ Show details data in first table
 
 ==================================================================
 */
-function showTodayGroupDeatil(StrArray, iLine) {
+function showTodayGroupDeatil(StrArray, iLine) { //ss to ViewBag, remove str
     var Array2 = new Array(Text(23), Text(24));
     var ss = StrArray.split('##');
     var str = new StringBulider();
@@ -615,7 +615,7 @@ function showTodayGroupDeatil(StrArray, iLine) {
 ///
 /// Show data of direct agent details
 ///
-function showTodaySubGroupSummary(ss) {
+function showTodaySubGroupSummary(ss) { //ss to ViewBag, remove str
     ss = ss.split('$$');
     var str = new StringBulider();
     str.append("<table width='99%' border='0' cellspacing='0' cellpadding='0'>"); // Dump data to table 
@@ -677,7 +677,7 @@ showSubGroupDetail 显示下级群组汇总详细
 
 ==================================================================
 */
-function showTodaySubGroupDetail(StrArray, iLine) {
+function showTodaySubGroupDetail(StrArray, iLine) { //ss to ViewBag, remove str
     var Array2 = new Array(Text(23), Text(24));
     var ss = StrArray.split('##');
     var str = new StringBulider();
